@@ -405,7 +405,7 @@ window.snake.scheme = function(settings = {}) {
             )
           );
           
-          if(settings.burger || settings.cactus || settings.blue || settings.hotdog || settings.egg || settings.lime || settings.red_pepper) {
+          if(settings.burger || settings.cactus || settings.josh || settings.blue || settings.hotdog || settings.egg || settings.lime || settings.red_pepper) {
             let burg = new Image();
             burg.src = 'https://i.postimg.cc/B6ycxmBb/porga.png';
             burg.width = burg.height = 47;
@@ -420,6 +420,11 @@ window.snake.scheme = function(settings = {}) {
             blue.src = 'https://i.postimg.cc/W35KQMb5/blue.png';
             blue.width = blue.height = 47;
             blue.className = 'DqMRee SsAred';
+            
+            let josh = new Image();
+            josh.src = 'https://i.postimg.cc/ydnmjjY8/josh.png';
+            josh.width = josh.height = 47;
+            josh.className = 'DqMRee SsAred';
            
             let dog = new Image();
             dog.src = 'https://i.postimg.cc/rsrbW0x6/dog.png';
@@ -450,12 +455,14 @@ window.snake.scheme = function(settings = {}) {
             settings.cactus     && document.querySelector('#apple').appendChild(cact);
             settings.hotdog     && document.querySelector('#apple').appendChild(dog);
             settings.egg        && document.querySelector('#apple').appendChild(egg);
+            settings.josh        && document.querySelector('#apple').appendChild(josh);
             settings.lime       && document.querySelector('#apple').appendChild(lime);
             settings.red_pepper && document.querySelector('#apple').appendChild(pepper);
 
 
             eval(`var bu_ = new Image(); bu_.src = 'https://i.postimg.cc/B6ycxmBb/porga.png';`);
             eval(`var bl_ = new Image(); bl_.src = 'https://i.postimg.cc/W35KQMb5/blue.png';`);
+            eval(`var jo_ = new Image(); jo_.src = 'https://i.postimg.cc/ydnmjjY8/josh.png';`);
             eval(`var ca_ = new Image(); ca_.src = 'https://i.postimg.cc/RCDVL7Bf/index.png';`);
             eval(`var do_ = new Image(); do_.src = 'https://i.postimg.cc/rsrbW0x6/dog.png';`);
             eval(`var eg_ = new Image(); eg_.src = 'https://i.postimg.cc/501jDL9g/eg.png';`);
@@ -478,6 +485,8 @@ window.snake.scheme = function(settings = {}) {
                       ? li_
                     : document.querySelector('#apple').getElementsByClassName('DqMRee tuJOWd')[0].src.includes('blue')
                       ? bl_
+                    : document.querySelector('#apple').getElementsByClassName('DqMRee tuJOWd')[0].src.includes('josh')
+                      ? jo_
                     : document.querySelector('#apple').getElementsByClassName('DqMRee tuJOWd')[0].src.includes('pepper')
                       ? pe_
                     : eg_;
@@ -492,7 +501,7 @@ window.snake.scheme = function(settings = {}) {
                 /[a-zA-Z0-9_$]{1,8}\.prototype\.[a-zA-Z0-9_$]{1,8}=function\(\){[^}]*?apple[^]*?el\(\)\)}}/
               )[0].replace(
                 'Math.floor(21*Math.random());',
-                `Math.floor((21 + ~~${settings.burger} + ~~${settings.cactus} + ~~${settings.hotdog} + ~~${settings.blue} + ~~${settings.egg} + ~~${settings.lime} + ~~${settings.red_pepper}) * Math.random());`
+                `Math.floor((21 + ~~${settings.burger} + ~~${settings.cactus} + ~~${settings.hotdog} + ~~${settings.josh} + ~~${settings.blue} + ~~${settings.egg} + ~~${settings.lime} + ~~${settings.red_pepper}) * Math.random());`
               )
             );
           }
