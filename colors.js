@@ -449,7 +449,6 @@ window.snake.scheme = function(settings = {}) {
             settings.air        && document.querySelector('#apple').appendChild(air);
             settings.cactus     && document.querySelector('#apple').appendChild(cact);
             settings.hotdog     && document.querySelector('#apple').appendChild(dog);
-            settings.egg        && document.querySelector('#apple').appendChild(egg);
             settings.lime       && document.querySelector('#apple').appendChild(lime);
             settings.red_pepper && document.querySelector('#apple').appendChild(pepper);
 
@@ -458,7 +457,6 @@ window.snake.scheme = function(settings = {}) {
             eval(`var ai_ = new Image(); ai_.src = 'https://i.postimg.cc/L5JpgSR2/background.png';`);
             eval(`var ca_ = new Image(); ca_.src = 'https://i.postimg.cc/RCDVL7Bf/index.png';`);
             eval(`var do_ = new Image(); do_.src = 'https://i.postimg.cc/rsrbW0x6/dog.png';`);
-            eval(`var eg_ = new Image(); eg_.src = 'https://i.postimg.cc/501jDL9g/eg.png';`);
             eval(`var li_ = new Image(); li_.src = 'https://i.postimg.cc/k5kWcyFB/lime.png';`);
             eval(`var pe_ = new Image(); pe_.src = 'https://i.postimg.cc/BQqHMbDc/redpepper.png';`);
             eval(
