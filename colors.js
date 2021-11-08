@@ -658,9 +658,9 @@ window.snake.dark = function() {
     buttons:       '#131323',
     sky:           '#191970',
     separators:    '#201559',
-    burger:        true,
-    lime:          true,
-    red_pepper:    true,
+    burger:        false,
+    lime:          false,
+    red_pepper:    false,
     egg:           true,
   });
 };
@@ -673,7 +673,7 @@ window.snake.desert = function() {
     shadows:       '#A9993C',
     light_squares: '#E8D56A',
     dark_squares:  '#C9B95C',
-    cactus:        true,
+    cactus:        false,
     egg:           true,
   });
 };
@@ -685,7 +685,7 @@ window.snake.pool = function() {
     shadows:       '#11529F',
     light_squares: '#359ECE',
     dark_squares:  '#3172AF',
-    hotdog:        true,
+    hotdog:        false,
     egg:           true,
   });
 };
