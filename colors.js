@@ -405,7 +405,7 @@ window.snake.scheme = function(settings = {}) {
             )
           );
           
-          if(settings.burger || settings.cactus || settings.hotdog || settings.egg || settings.lime || settings.red_pepper) {
+          if(settings.burger || settings.cactus || settings.blue || settings.hotdog || settings.egg || settings.lime || settings.red_pepper) {
             let burg = new Image();
             burg.src = 'https://i.postimg.cc/B6ycxmBb/porga.png';
             burg.width = burg.height = 47;
@@ -415,7 +415,12 @@ window.snake.scheme = function(settings = {}) {
             cact.src = 'https://i.postimg.cc/RCDVL7Bf/index.png';
             cact.width = cact.height = 47;
             cact.className = 'DqMRee SsAred';
-
+          
+            let blue = new Image();
+            blue.src = 'https://i.postimg.cc/W35KQMb5/blue.png';
+            blue.width = blue.height = 47;
+            blue.className = 'DqMRee SsAred';
+           
             let dog = new Image();
             dog.src = 'https://i.postimg.cc/rsrbW0x6/dog.png';
             dog.width = dog.height = 47;
@@ -441,6 +446,7 @@ window.snake.scheme = function(settings = {}) {
                 document.querySelector('#apple').removeChild(document.querySelector('#apple').children[i]);
 
             settings.burger     && document.querySelector('#apple').appendChild(burg);
+            settings.blue       && document.querySelector('#apple').appendChild(blue);
             settings.cactus     && document.querySelector('#apple').appendChild(cact);
             settings.hotdog     && document.querySelector('#apple').appendChild(dog);
             settings.egg        && document.querySelector('#apple').appendChild(egg);
@@ -449,6 +455,7 @@ window.snake.scheme = function(settings = {}) {
 
 
             eval(`var bu_ = new Image(); bu_.src = 'https://i.postimg.cc/B6ycxmBb/porga.png';`);
+            eval(`var bl_ = new Image(); bl_.src = 'https://i.postimg.cc/W35KQMb5/blue.png';`);
             eval(`var ca_ = new Image(); ca_.src = 'https://i.postimg.cc/RCDVL7Bf/index.png';`);
             eval(`var do_ = new Image(); do_.src = 'https://i.postimg.cc/rsrbW0x6/dog.png';`);
             eval(`var eg_ = new Image(); eg_.src = 'https://i.postimg.cc/501jDL9g/eg.png';`);
@@ -469,6 +476,8 @@ window.snake.scheme = function(settings = {}) {
                       ? do_ 
                     : document.querySelector('#apple').getElementsByClassName('DqMRee tuJOWd')[0].src.includes('lime')
                       ? li_
+                    : document.querySelector('#apple').getElementsByClassName('DqMRee tuJOWd')[0].src.includes('blue')
+                      ? bl_
                     : document.querySelector('#apple').getElementsByClassName('DqMRee tuJOWd')[0].src.includes('pepper')
                       ? pe_
                     : eg_;
@@ -483,7 +492,7 @@ window.snake.scheme = function(settings = {}) {
                 /[a-zA-Z0-9_$]{1,8}\.prototype\.[a-zA-Z0-9_$]{1,8}=function\(\){[^}]*?apple[^]*?el\(\)\)}}/
               )[0].replace(
                 'Math.floor(21*Math.random());',
-                `Math.floor((21 + ~~${settings.burger} + ~~${settings.cactus} + ~~${settings.hotdog} + ~~${settings.egg} + ~~${settings.lime} + ~~${settings.red_pepper}) * Math.random());`
+                `Math.floor((21 + ~~${settings.burger} + ~~${settings.cactus} + ~~${settings.hotdog} + ~~${settings.blue} + ~~${settings.egg} + ~~${settings.lime} + ~~${settings.red_pepper}) * Math.random());`
               )
             );
           }
@@ -652,6 +661,7 @@ window.snake.dark = function() {
     burger:        true,
     lime:          true,
     red_pepper:    true,
+    blue:          true,  
   });
 };
 window.snake.desert = function() {
@@ -664,6 +674,7 @@ window.snake.desert = function() {
     light_squares: '#E8D56A',
     dark_squares:  '#C9B95C',
     cactus:        true,
+    blue:          true,
   });
 };
 window.snake.pool = function() {
@@ -675,6 +686,7 @@ window.snake.pool = function() {
     light_squares: '#359ECE',
     dark_squares:  '#3172AF',
     hotdog:        true,
+    blue:          true,
   });
 };
 window.snake.colorful = function() {
@@ -685,6 +697,7 @@ window.snake.colorful = function() {
     shadows:       '#D75C4E',
     light_squares: '#FFA87B',
     dark_squares:  '#F35C6E',
+    blue:          true,
   });
 };
 window.snake.light = function() {
@@ -696,6 +709,7 @@ window.snake.light = function() {
     light_squares: '#E2EFF1',
     dark_squares:  '#B6D5E1',
     buttons:       '#90B6D1', 
+    blue:          true,
   });
 };
 window.snake.pink = function() {
@@ -707,6 +721,7 @@ window.snake.pink = function() {
     light_squares: '#EB92FB',
     dark_squares:  '#C855BC',
     buttons:       '#CA50CE',
+    blue:          true,
   });
 };
 window.snake.end = function() {
@@ -721,6 +736,7 @@ window.snake.end = function() {
     separators:    '#aeaeae',
     buttons:       '#bdbdbd',
     egg:           true,
+    blue:          true,
   });
 };
 
