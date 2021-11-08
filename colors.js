@@ -405,11 +405,16 @@ window.snake.scheme = function(settings = {}) {
             )
           );
           
-          if(settings.burger || settings.cactus || settings.hotdog || settings.egg || settings.lime || settings.red_pepper) {
+          if(settings.burger || settings.cactus || settings.hotdog || settings.egg || settings.lime || settings.air||settings.red_pepper) {
             let burg = new Image();
             burg.src = 'https://i.postimg.cc/B6ycxmBb/porga.png';
             burg.width = burg.height = 47;
             burg.className = 'DqMRee SsAred';
+            
+            let air = new Image();
+            air.src = 'https://i.postimg.cc/L5JpgSR2/background.png';
+            air.width = air.height = 47;
+            air.className = 'DqMRee SsAred';
 
             let cact = new Image();
             cact.src = 'https://i.postimg.cc/RCDVL7Bf/index.png';
@@ -441,6 +446,7 @@ window.snake.scheme = function(settings = {}) {
                 document.querySelector('#apple').removeChild(document.querySelector('#apple').children[i]);
 
             settings.burger     && document.querySelector('#apple').appendChild(burg);
+            settings.air        && document.querySelector('#apple').appendChild(air);
             settings.cactus     && document.querySelector('#apple').appendChild(cact);
             settings.hotdog     && document.querySelector('#apple').appendChild(dog);
             settings.egg        && document.querySelector('#apple').appendChild(egg);
@@ -449,6 +455,7 @@ window.snake.scheme = function(settings = {}) {
 
 
             eval(`var bu_ = new Image(); bu_.src = 'https://i.postimg.cc/B6ycxmBb/porga.png';`);
+            eval(`var ai_ = new Image(); ai_.src = 'https://i.postimg.cc/L5JpgSR2/background.png';`);
             eval(`var ca_ = new Image(); ca_.src = 'https://i.postimg.cc/RCDVL7Bf/index.png';`);
             eval(`var do_ = new Image(); do_.src = 'https://i.postimg.cc/rsrbW0x6/dog.png';`);
             eval(`var eg_ = new Image(); eg_.src = 'https://i.postimg.cc/501jDL9g/eg.png';`);
@@ -469,6 +476,8 @@ window.snake.scheme = function(settings = {}) {
                       ? do_ 
                     : document.querySelector('#apple').getElementsByClassName('DqMRee tuJOWd')[0].src.includes('lime')
                       ? li_
+                    : document.querySelector('#apple').getElementsByClassName('DqMRee tuJOWd')[0].src.includes('air')
+                      ? ai_
                     : document.querySelector('#apple').getElementsByClassName('DqMRee tuJOWd')[0].src.includes('pepper')
                       ? pe_
                     : eg_;
@@ -483,7 +492,7 @@ window.snake.scheme = function(settings = {}) {
                 /[a-zA-Z0-9_$]{1,8}\.prototype\.[a-zA-Z0-9_$]{1,8}=function\(\){[^}]*?apple[^]*?el\(\)\)}}/
               )[0].replace(
                 'Math.floor(21*Math.random());',
-                `Math.floor((21 + ~~${settings.burger} + ~~${settings.cactus} + ~~${settings.hotdog} + ~~${settings.egg} + ~~${settings.lime} + ~~${settings.red_pepper}) * Math.random());`
+                `Math.floor((21 + ~~${settings.burger} + ~~${settings.cactus} + ~~${settings.air} + ~~${settings.hotdog} + ~~${settings.egg} + ~~${settings.lime} + ~~${settings.red_pepper}) * Math.random());`
               )
             );
           }
