@@ -425,12 +425,7 @@ window.snake.scheme = function(settings = {}) {
             dog.src = 'https://i.postimg.cc/rsrbW0x6/dog.png';
             dog.width = dog.height = 47;
             dog.className = 'DqMRee SsAred';
-
-            let egg = new Image();
-            egg.src = 'https://i.postimg.cc/501jDL9g/eg.png';
-            egg.width = egg.height = 47;
-            egg.className = 'DqMRee SsAred';
-
+            
             let lime = new Image();
             lime.src = 'https://i.postimg.cc/k5kWcyFB/lime.png';
             lime.width = lime.height = 47;
@@ -490,7 +485,7 @@ window.snake.scheme = function(settings = {}) {
                 /[a-zA-Z0-9_$]{1,8}\.prototype\.[a-zA-Z0-9_$]{1,8}=function\(\){[^}]*?apple[^]*?el\(\)\)}}/
               )[0].replace(
                 'Math.floor(21*Math.random());',
-                `Math.floor((21 + ~~${settings.burger} + ~~${settings.cactus} + ~~${settings.air} + ~~${settings.hotdog} + ~~${settings.egg} + ~~${settings.lime} + ~~${settings.red_pepper}) * Math.random());`
+                `Math.floor((21 + ~~${settings.burger} + ~~${settings.cactus} + ~~${settings.air} + ~~${settings.hotdog} + ~~${settings.lime} + ~~${settings.red_pepper}) * Math.random());`
               )
             );
           }
@@ -659,7 +654,7 @@ window.snake.dark = function() {
     burger:        false,
     lime:          false,
     red_pepper:    false,
-    egg:           true,
+    air:           true,
   });
 };
 window.snake.desert = function() {
@@ -672,7 +667,7 @@ window.snake.desert = function() {
     light_squares: '#E8D56A',
     dark_squares:  '#C9B95C',
     cactus:        false,
-    egg:           true,
+    air:           true,
   });
 };
 window.snake.pool = function() {
@@ -684,7 +679,7 @@ window.snake.pool = function() {
     light_squares: '#359ECE',
     dark_squares:  '#3172AF',
     hotdog:        false,
-    egg:           true,
+    air:           true,
   });
 };
 window.snake.colorful = function() {
@@ -695,7 +690,7 @@ window.snake.colorful = function() {
     shadows:       '#D75C4E',
     light_squares: '#FFA87B',
     dark_squares:  '#F35C6E',
-    egg:           true,
+    air:           true,
   });
 };
 window.snake.light = function() {
@@ -707,7 +702,7 @@ window.snake.light = function() {
     light_squares: '#E2EFF1',
     dark_squares:  '#B6D5E1',
     buttons:       '#90B6D1', 
-    egg:           true,
+    air:           true,
   });
 };
 window.snake.pink = function() {
@@ -719,7 +714,7 @@ window.snake.pink = function() {
     light_squares: '#EB92FB',
     dark_squares:  '#C855BC',
     buttons:       '#CA50CE',
-    egg:           true,
+    air:           true,
   });
 };
 window.snake.end = function() {
@@ -733,7 +728,7 @@ window.snake.end = function() {
     sky:           '#eaeaea',
     separators:    '#aeaeae',
     buttons:       '#bdbdbd',
-    egg:           true,
+    air:           true,
   });
 };
 
