@@ -405,7 +405,7 @@ window.snake.scheme = function(settings = {}) {
             )
           );
           
-          if(settings.burger || settings.cactus || settings.hotdog || settings.egg || settings.air ||settings.lime || settings.air||settings.red_pepper) {
+          if(settings.burger || settings.cactus || settings.hotdog || settings.egg || settings.air || settings.lime || settings.air||settings.red_pepper) {
             let burg = new Image();
             burg.src = 'https://i.postimg.cc/B6ycxmBb/porga.png';
             burg.width = burg.height = 47;
@@ -661,6 +661,7 @@ window.snake.dark = function() {
     burger:        true,
     lime:          true,
     red_pepper:    true,
+    egg:           true,
   });
 };
 window.snake.desert = function() {
@@ -673,6 +674,7 @@ window.snake.desert = function() {
     light_squares: '#E8D56A',
     dark_squares:  '#C9B95C',
     cactus:        true,
+    egg:           true,
   });
 };
 window.snake.pool = function() {
@@ -684,6 +686,7 @@ window.snake.pool = function() {
     light_squares: '#359ECE',
     dark_squares:  '#3172AF',
     hotdog:        true,
+    egg:           true,
   });
 };
 window.snake.colorful = function() {
@@ -694,6 +697,7 @@ window.snake.colorful = function() {
     shadows:       '#D75C4E',
     light_squares: '#FFA87B',
     dark_squares:  '#F35C6E',
+    egg:           true,
   });
 };
 window.snake.light = function() {
@@ -705,6 +709,7 @@ window.snake.light = function() {
     light_squares: '#E2EFF1',
     dark_squares:  '#B6D5E1',
     buttons:       '#90B6D1', 
+    egg:           true,
   });
 };
 window.snake.pink = function() {
@@ -716,6 +721,7 @@ window.snake.pink = function() {
     light_squares: '#EB92FB',
     dark_squares:  '#C855BC',
     buttons:       '#CA50CE',
+    egg:           true,
   });
 };
 window.snake.end = function() {
