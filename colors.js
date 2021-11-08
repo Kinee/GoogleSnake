@@ -405,7 +405,7 @@ window.snake.scheme = function(settings = {}) {
             )
           );
           
-          if(settings.burger || settings.cactus || settings.hotdog || settings.egg || settings.lime || settings.air||settings.red_pepper) {
+          if(settings.burger || settings.cactus || settings.hotdog || settings.egg || settings.air ||settings.lime || settings.air||settings.red_pepper) {
             let burg = new Image();
             burg.src = 'https://i.postimg.cc/B6ycxmBb/porga.png';
             burg.width = burg.height = 47;
