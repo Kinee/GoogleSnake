@@ -405,11 +405,16 @@ window.snake.scheme = function(settings = {}) {
             )
           );
           
-          if(settings.burger || settings.cactus || settings.josh || settings.blue || settings.robux ||settings.hotdog || settings.GreenEgg || settings.egg || settings.lime || settings.red_pepper) {
+          if(settings.burger || settings.cactus || settings.josh || settings.blue || settings.invis || settings.robux ||settings.hotdog || settings.GreenEgg || settings.egg || settings.lime || settings.red_pepper) {
             let burg = new Image();
             burg.src = 'https://i.postimg.cc/B6ycxmBb/porga.png';
             burg.width = burg.height = 47;
             burg.className = 'DqMRee SsAred';
+            
+            let invis = new Image();
+            invis.src = 'https://i.postimg.cc/YqqkCKns/invis.png';
+            invis.width = invis.height = 47;
+            invis.className = 'DqMRee SsAred';
             
             let GreenEgg = new Image();
             GreenEgg.src = 'https://i.postimg.cc/gcgq18f6/GreenEgg.png';
@@ -461,18 +466,20 @@ window.snake.scheme = function(settings = {}) {
                 document.querySelector('#apple').removeChild(document.querySelector('#apple').children[i]);
 
             settings.burger     && document.querySelector('#apple').appendChild(burg);
+            settings.invis      && document.querySelector('#apple').appendChild(invis);
             settings.GreenEgg   && document.querySelector('#apple').appendChild(GreenEgg);
             settings.robux      && document.querySelector('#apple').appendChild(robux);
             settings.blue       && document.querySelector('#apple').appendChild(blue);
             settings.cactus     && document.querySelector('#apple').appendChild(cact);
             settings.hotdog     && document.querySelector('#apple').appendChild(dog);
             settings.egg        && document.querySelector('#apple').appendChild(egg);
-            settings.josh        && document.querySelector('#apple').appendChild(josh);
+            settings.josh       && document.querySelector('#apple').appendChild(josh);
             settings.lime       && document.querySelector('#apple').appendChild(lime);
             settings.red_pepper && document.querySelector('#apple').appendChild(pepper);
 
 
             eval(`var bu_ = new Image(); bu_.src = 'https://i.postimg.cc/B6ycxmBb/porga.png';`);
+            eval(`var in_ = new Image(); in_.src = 'https://i.postimg.cc/YqqkCKns/invis.png';`);
             eval(`var gr_ = new Image(); gr_.src = 'https://i.postimg.cc/gcgq18f6/GreenEgg.png';`);
             eval(`var ro_ = new Image(); ro_.src = 'https://i.postimg.cc/4N0PHX32/robux.png';`);
             eval(`var bl_ = new Image(); bl_.src = 'https://i.postimg.cc/W35KQMb5/blue.png';`);
@@ -493,6 +500,8 @@ window.snake.scheme = function(settings = {}) {
                       ? bu_ 
                     : document.querySelector('#apple').getElementsByClassName('DqMRee tuJOWd')[0].src.includes('index') 
                       ? ca_ 
+                    : document.querySelector('#apple').getElementsByClassName('DqMRee tuJOWd')[0].src.includes('invis') 
+                      ? in_ 
                     : document.querySelector('#apple').getElementsByClassName('DqMRee tuJOWd')[0].src.includes('dog')
                       ? do_ 
                     : document.querySelector('#apple').getElementsByClassName('DqMRee tuJOWd')[0].src.includes('GreenEgg')
